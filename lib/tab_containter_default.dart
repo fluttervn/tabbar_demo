@@ -23,10 +23,6 @@ class _TabContainerDefaultState extends State<TabContainerDefault> {
     ];
   }
 
-//  @override
-//  bool get wantKeepAlive =>
-//      true; //by default it will be null, change it to true.
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,12 +35,15 @@ class _TabContainerDefaultState extends State<TabContainerDefault> {
           bottomNavigationBar: TabBar(
             tabs: [
               Tab(
+                text: 'Tab1',
                 icon: Icon(Icons.home),
               ),
               Tab(
+                text: 'Tab2',
                 icon: Icon(Icons.report_problem),
               ),
               Tab(
+                text: 'Tab3',
                 icon: Icon(Icons.settings),
               ),
             ],

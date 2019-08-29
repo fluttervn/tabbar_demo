@@ -5,7 +5,13 @@ class Tab1 extends StatefulWidget {
   _Tab1State createState() => _Tab1State();
 }
 
-class _Tab1State extends State<Tab1> {
+class _Tab1State extends State<Tab1> with AutomaticKeepAliveClientMixin<Tab1> {
+  @override
+  void initState() {
+    super.initState();
+    print('initState Tab1');
+  }
+
   @override
   Widget build(BuildContext context) {
     print('build Tab1');
@@ -21,4 +27,7 @@ class _Tab1State extends State<Tab1> {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

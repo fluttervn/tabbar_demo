@@ -40,7 +40,8 @@ class _TabContainerState extends State<TabContainer> {
     return MaterialApp(
       color: Colors.yellow,
       home: Scaffold(
-        body: IndexedStack(index: tabIndex, children: listScreens),
+        body: IndexedStack(
+            index: listScreensIndex.indexOf(tabIndex), children: listScreens),
         bottomNavigationBar: _buildTabBar(),
         backgroundColor: Theme.of(context).primaryColor,
       ),
